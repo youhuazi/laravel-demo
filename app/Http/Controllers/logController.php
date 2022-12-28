@@ -15,5 +15,6 @@ class logController extends BaseController
         Log::info($request->all());
         Log::info("test");
         echo "1234";
+        return response()->json(["success" => true]);
     }
 }
