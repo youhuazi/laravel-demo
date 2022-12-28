@@ -22,5 +22,9 @@ Route::get('/', function () {
 //    return view('welcome');
 //});
 
-Route::any('test', 'logController@test');
+//Route::post('test', 'logController@test');
 //Route::get('test', 'logController@test');
+Route::post('test', 'logController@test');
+Route::get('test', function () {
+    return redirect('/');
+});
