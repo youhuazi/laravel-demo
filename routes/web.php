@@ -13,15 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use Illuminate\Support\Facades\Log;
+use Illuminate\Http\Request;
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('test', function () {
-    return view('welcome');
-});
+//Route::get('test', function () {
+//    return view('welcome');
+//});
 
-Route::post('fromSendGrid', function (\http\Client\Request $request) {
-    Log::info($request->all());
-    return view('welcome');
-});
+Route::any('test', 'logController@test');
+//Route::get('test', 'logController@test');
