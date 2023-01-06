@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 class logController extends BaseController
 {
     public function test(Request $request) {
-        Log::info(json($request->all()));
+        Log::info(json_encode($request->all()));
         Log::info("test");
         echo "1234";
         return response()->json(["success" => true]);
