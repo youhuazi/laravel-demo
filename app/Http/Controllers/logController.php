@@ -13,6 +13,7 @@ class logController extends BaseController
 {
     public function test(Request $request) {
         Log::info(json_encode($request->all()));
+        Log::info("test");
         return response()->json(["success" => true]);
     }
 }
