@@ -25,6 +25,4 @@ Route::get('/', function () {
 //Route::post('test', 'logController@test');
 //Route::get('test', 'logController@test');
 Route::post('test', 'logController@test');
-Route::get('test', function () {
-    return redirect('/');
-});
+
